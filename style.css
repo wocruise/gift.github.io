@@ -7,9 +7,17 @@
     display: block;
     position: absolute;
     transform: translate(-50%,-50%);
-    animation: heart 1s ease infinite
+    animation: heart 2s ease infinite;
+    background:
+    radial-gradient(circle closest-side, currentColor 80%,black 50%, transparent) center/var(--d, 0) var(--d, 0) no-repeat;
+  transition: 0.3s, background-position 0.3s 0.3s
   }
-  
+  .heart:hover {
+    transition: 0.3s, background-size 0.4s 0.3s, color 0.3s 0.3s;
+    background-position: center;
+    --d: 180%;
+    color: #fff
+  }
   @keyframes heart {
     96% {
       transform: translate(-50%,-50%) scale(.8,.8)
